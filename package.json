@@ -1,0 +1,34 @@
+{
+  "name": "valid-phn",
+  "version": "1.0.0",
+  "description": "Validator for Canadian PHNs (Personal Health Numbers)",
+  "main": "index.js",
+  "scripts": {
+   "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+   "prepublish": "npm run compile",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattvague/valid-phn.git"
+  },
+  "keywords": [
+    "canada",
+    "health",
+    "canadian",
+    "phn",
+    "personal",
+    "health",
+    "number"
+  ],
+  "author": "Matt Vague",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattvague/valid-phn/issues"
+  },
+  "homepage": "https://github.com/mattvague/valid-phn#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
