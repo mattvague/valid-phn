@@ -9,7 +9,7 @@ export const validPhn = (phn) => {
   // PHN must be an integer or it ain't valid
   if (isNaN(phnInt)) { return false }
 
-  // Split PHN into array of integer
+  // Split PHN into array of integers
   const phnDigits = Array.from(phnInt.toString()).map(Number)
 
   // Shift & pop first and last digits
@@ -19,12 +19,10 @@ export const validPhn = (phn) => {
   // PHN must start with 9 or it ain't valid
   if (firstDigit !== 9) { return false }
 
-  // Multiply each digit by the specified digit weight, divide each by
-  // 11, and grab the remainder. Finally, add all of the digits up, divide
-  // by 11 and grab the total remainder
+  // Multiply each digit by specified weight, divide by 11,
+  // sum remainders, divide by 11 and grab total remainder
   const digitRemainderTotal = phnDigits
-    .map((digit, i) => (digit * DIGIT_WEIGHTS[i]) % 11)
-    .reduce((m, i) => m + i) % 11
+    .reduce((total, digit, i) => total + ((digit * DIGIT_WEIGHTS[i]) % 11), 0) % 11
 
   // Total remainder subtracted from 11 must equal last digit to be valid
   return (11 - digitRemainderTotal) === lastDigit
