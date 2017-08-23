@@ -1,4 +1,4 @@
-// Validator for Canadian PHNs (Personal Health Numbers)
+// Validator for British Columbia PHNs (Personal Health Numbers)
 // http://www2.gov.bc.ca/assets/gov/health/practitioner-pro/software-development-guidelines/app_d.pdf
 
 const DIGIT_WEIGHTS = [2, 4, 8, 5, 10, 9, 7, 3]

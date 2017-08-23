@@ -1,7 +1,7 @@
 {
   "name": "valid-phn",
   "version": "1.0.0",
-  "description": "Validator for Canadian PHNs (Personal Health Numbers)",
+  "description": "Validator for British Columbia PHNs (Personal Health Numbers)",
   "main": "src/index.js",
   "scripts": {
     "compile": "babel --presets es2015,stage-0 -d lib/ src/",
